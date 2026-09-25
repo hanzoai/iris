@@ -1,0 +1,5 @@
+# iris CI (hanzoai/ci). The gate is `make test`: Go golden + Rust daemon + TS viewer,
+# all three against schema/golden.txt.
+test:
+  - name: make test
+    run: make test

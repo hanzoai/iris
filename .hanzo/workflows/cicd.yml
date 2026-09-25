@@ -1,0 +1,12 @@
+# All config is /hanzo.yml; this only imports hanzoai/ci.
+name: CI/CD
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+jobs:
+  cicd:
+    uses: hanzoai/ci/.hanzo/workflows/build.yml@v1
+    secrets: inherit
